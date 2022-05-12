@@ -2,7 +2,7 @@ import os
 import shutil
 import project_setup
 
-# os.system("scripts\\win\\nuitka_build.bat")
+os.system("scripts\\win\\nuitka_build.bat")
 
 main_dist_folder = os.path.join(project_setup.build_folder_name, "main.dist")
 

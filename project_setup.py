@@ -2,6 +2,7 @@ import os
 import shutil
 import sys
 
+print("Start SetUP")
 
 python_venv_path = os.path.abspath("venv")
 python_venv_lib_path = os.path.abspath(os.path.join(python_venv_path, "Lib", "site-packages"))
@@ -12,11 +13,12 @@ python_std_folder = os.path.join(os.path.split(sys.executable)[0], "Lib")
 if __name__ == "__main__":
 
     if not os.path.isdir(python_venv_path):
+        print("Python Venv")
         os.system("python -m venv venv")
         os.system("venv\\Scripts\\pip.exe install -r requirements.txt")
 
     if not os.path.isdir(build_folder_name):
-        os.mkdir("build_folder_name")
+        os.mkdir("out")
 
     if not os.path.isdir(build_miss_folder):
         os.mkdir(build_miss_folder)
